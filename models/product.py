@@ -31,5 +31,7 @@ class Product(SQLModel, table=True):
         sa_column=Column(ARRAY(String))
     )
 
+    admin_id: int = Field(foreign_key="user.id")
+
     created_at: datetime = Field(default_factory=datetime.utcnow)
     updated_at: datetime = Field(default_factory=datetime.utcnow)

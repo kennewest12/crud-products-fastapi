@@ -1,6 +1,8 @@
 import os
 from sqlmodel import SQLModel, Session, create_engine
 from dotenv import load_dotenv
+from models.product import Product
+from models.user import User
 
 load_dotenv()
 
