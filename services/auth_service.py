@@ -43,10 +43,6 @@ def register_user(session: Session, user: UserRegister):
         "user_id": db_user.id,
     }
 
-
-# -------------------------
-# ADMIN REGISTER
-# -------------------------
 def register_admin(session: Session, user: UserRegister):
 
     existing_user = session.exec(
@@ -75,10 +71,6 @@ def register_admin(session: Session, user: UserRegister):
         "admin_id": db_admin.id,
     }
 
-
-# -------------------------
-# USER LOGIN
-# -------------------------
 def login_user(session: Session, user: UserLogin):
 
     db_user = authenticate_user(
@@ -102,10 +94,6 @@ def login_user(session: Session, user: UserLogin):
         "token_type": "bearer",
     }
 
-
-# -------------------------
-# ADMIN LOGIN
-# -------------------------
 def login_admin(session: Session, user: UserLogin):
 
     db_user = authenticate_user(
@@ -135,10 +123,6 @@ def login_admin(session: Session, user: UserLogin):
         "token_type": "bearer",
     }
 
-
-# -------------------------
-# FORGOT PASSWORD
-# -------------------------
 def forgot_password(session: Session, data: ForgotPassword):
 
     user = session.exec(
@@ -155,10 +139,6 @@ def forgot_password(session: Session, data: ForgotPassword):
         "message": "Password reset request received",
     }
 
-
-# -------------------------
-# RESET PASSWORD
-# -------------------------
 def reset_password(session: Session, data: ResetPassword):
 
     user = session.exec(
