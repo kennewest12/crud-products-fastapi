@@ -6,6 +6,7 @@ __pycache__/
 # Virtual Environment
 venv/
 .env
+.env.*
 
 # VS Code
 .vscode/
@@ -15,3 +16,9 @@ venv/
 
 # macOS
 .DS_Store
+
+# Windows
+Thumbs.db
+
+# Logs
+*.log
